@@ -119,8 +119,6 @@ export const CONTACT_DETAILS = {
   // Phones
   primaryPhone: '+91 95555 35036',
   primaryPhoneLabel: 'Business & Collaborations',
-  secondaryPhone: '+91 93184 45957',
-  secondaryPhoneLabel: 'Technical Assistance',
 
   // Emails (kept as an array so the footer can list all three;
   // email/primaryEmail below is kept for any existing code that
@@ -148,21 +146,18 @@ export const CONTACT_DETAILS = {
     name: 'Mr. Piyush Verma',
     phone: '+91-95555-35036', // see discrepancy note above
   },
-  technicalSupport: {
-    phone: '+91-93184-45957',
-  },
   whatsappNumber: '919555535036',
   whatsappMessage: "Hi, I'd like to know more about STREEPLUS™.",
 }
 
 // Web3Forms access key — sign up free at https://web3forms.com,
 // create a form, and paste the key it gives you here.
-export const WEB3FORMS_ACCESS_KEY = '78490260-1511-4567-9132-8504a50f9537'
+export const WEB3FORMS_ACCESS_KEY = 'e35bff00-b32e-4f57-8aed-7a4d67d202d6'
 
 // Web3Forms access key used on the CHECKOUT page — this points to a
 // DIFFERENT Web3Forms form from the one used for the Contact page.
 // TODO: Replace with your dedicated Checkout form's access key.
-export const CHECKOUT_WEB3FORMS_ACCESS_KEY = 'ab5eb559-286d-4860-b6d2-dd4cc625a895'
+export const CHECKOUT_WEB3FORMS_ACCESS_KEY = 'addfd028-c232-4bb5-82a8-ac5349702656'
 
 // New — legal links row in the footer bottom bar.
 // Point these at real routes/pages once they exist.

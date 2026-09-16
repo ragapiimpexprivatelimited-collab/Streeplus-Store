@@ -135,10 +135,6 @@ export default function ContactPage() {
                 {CONTACT_DETAILS.businessContact.phone}
               </p>
               <p>
-                <strong className="block text-stone-900">Technical Support</strong>
-                {CONTACT_DETAILS.technicalSupport.phone}
-              </p>
-              <p>
                 <strong className="block text-stone-900">Email</strong>
                 {CONTACT_DETAILS.emails.slice(0, 2).map((email) => (
                   <a key={email} href={`mailto:${email}`} className="block hover:text-emerald-700">
@@ -198,7 +194,6 @@ export default function ContactPage() {
                 <div className="text-[13.5px] text-stone-700">
                   <strong className="block text-stone-900">Call us</strong>
                   <span className="block">{CONTACT_DETAILS.businessContact.phone}</span>
-                  <span className="block">{CONTACT_DETAILS.technicalSupport.phone}</span>
                 </div>
               </div>
 

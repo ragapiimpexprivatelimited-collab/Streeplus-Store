@@ -58,22 +58,6 @@ export default function Footer() {
                 <p className="text-stone-500">
                   ({CONTACT_DETAILS.primaryPhoneLabel})
                 </p>
-
-                <p className="flex items-center justify-center gap-2 pt-1">
-                  <Phone
-                    size={13}
-                    className="shrink-0 text-emerald-700"
-                  />
-
-                  <span>
-                    <strong className="text-stone-900">(S):</strong>{' '}
-                    {CONTACT_DETAILS.secondaryPhone}
-                  </span>
-                </p>
-
-                <p className="text-stone-500">
-                  ({CONTACT_DETAILS.secondaryPhoneLabel})
-                </p>
               </div>
 
               <div className="mt-6 space-y-1 font-mono text-[13px] text-stone-700">
