@@ -5,7 +5,6 @@ import {
   ChevronRight,
   Cpu,
   Leaf,
-  Play,
   Target,
   Truck,
   Users,
@@ -209,76 +208,19 @@ export default function HomePage() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.1fr_1fr] lg:gap-6">
-          <div className="space-y-8">
-            {HOME_CONTENT.whyRagapi.items.slice(0, 2).map((item, index) => {
-              const Icon = ICONS[item.icon] ?? Target
-              return (
-                <Reveal key={item.title} delay={index * 100} className="mx-auto max-w-[240px] text-center">
-                  <div className="flex items-center justify-center gap-2">
-                    <Icon size={18} className="text-emerald-700" />
-                    <h3 className="text-[15px] font-bold text-emerald-800">{item.title}</h3>
-                  </div>
-                  <p className="mt-2 text-[13px] leading-relaxed text-stone-600">{item.text}</p>
-                </Reveal>
-              )
-            })}
-          </div>
-
-          {/* ================================================================
-              VIDEO PLACEHOLDER — no real video/poster wired up yet.
-              Swap this whole block for one of the two options below once
-              you have footage:
-
-              OPTION A — self-hosted file:
-              <video controls poster="/videos/why-ragapi-poster.jpg" className="h-full w-full rounded-xl object-cover">
-                <source src="/videos/why-ragapi.mp4" type="video/mp4" />
-              </video>
-
-              OPTION B — YouTube/Vimeo embed:
-              <iframe
-                className="h-full w-full rounded-xl"
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title={HOME_CONTENT.whyRagapi.videoLabel}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-             ================================================================ */}
-          <Reveal delay={120}>
-            {/* <div className="relative mx-auto w-full max-w-md rounded-[1.75rem] border-[10px] border-stone-900 bg-stone-900 shadow-xl">
-              <div className="flex aspect-video items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-emerald-700 to-emerald-900">
-                <button
-                  type="button"
-                  aria-label={`Play ${HOME_CONTENT.whyRagapi.videoLabel} video`}
-                  className="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-emerald-800 shadow-lg transition-transform duration-200 hover:scale-105"
-                >
-                  <Play size={22} fill="currentColor" />
-                </button>
-              </div>
-              <div className="absolute -bottom-3 left-1/2 h-3 w-24 -translate-x-1/2 rounded-b-lg bg-stone-900" />
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full bg-amber-100 px-3 py-1 text-[10px] font-semibold text-amber-800">
-                Placeholder — add real video
-              </span>
-            </div> */}
-            <video playsInline muted  loop autoPlay poster="/videos/why-ragapi-poster.jpg" className="h-full w-full rounded-xl object-cover">
-              <source src="home_video.mp4" type="video/mp4" />
-            </video>
-          </Reveal>
-
-          <div className="space-y-8">
-            {HOME_CONTENT.whyRagapi.items.slice(2, 4).map((item, index) => {
-              const Icon = ICONS[item.icon] ?? Target
-              return (
-                <Reveal key={item.title} delay={index * 100} className="mx-auto max-w-[240px] text-center">
-                  <div className="flex items-center justify-center gap-2">
-                    <Icon size={18} className="text-emerald-700" />
-                    <h3 className="text-[15px] font-bold text-emerald-800">{item.title}</h3>
-                  </div>
-                  <p className="mt-2 text-[13px] leading-relaxed text-stone-600">{item.text}</p>
-                </Reveal>
-              )
-            })}
-          </div>
+        <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          {HOME_CONTENT.whyRagapi.items.map((item, index) => {
+            const Icon = ICONS[item.icon] ?? Target
+            return (
+              <Reveal key={item.title} delay={index * 100} className="mx-auto max-w-[240px] text-center">
+                <div className="flex items-center justify-center gap-2">
+                  <Icon size={18} className="text-emerald-700" />
+                  <h3 className="text-[15px] font-bold text-emerald-800">{item.title}</h3>
+                </div>
+                <p className="mt-2 text-[13px] leading-relaxed text-stone-600">{item.text}</p>
+              </Reveal>
+            )
+          })}
         </div>
       </section>
 
